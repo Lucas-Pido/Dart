@@ -1,0 +1,116 @@
+abstract class Pet{
+  late String nome;
+  late int idade;
+  late String raca;
+  
+  void comer(){
+    print("COMER VINDO DA CLASSE PET");
+    }
+  
+  void tomarBanho(){
+  }
+  
+  void fazerXixi(){
+    }
+  }
+
+class Coelho extends Pet{
+  Coelho(){
+  nome = "Rudolph";
+  idade = 5;
+  raca = "Peludo";
+  }
+  void pular(){
+    print("COELHO PULA");
+  }
+  
+  @override
+  void tomarBanho(){
+    print("COELHO TOMA BANHO NO LAGO");
+  }
+  @override
+    void fazerXixi(){
+    print("COELHO FAZ XIXI NO MATO");
+    }
+}
+
+
+class Gato extends Pet{
+  
+  late bool temBrinquedos;
+  
+  Gato(){
+    temBrinquedos = true;
+    nome = "Wiser";
+    idade = 6;
+    raca = "leonino";
+  }
+  
+  void mia(){
+    print("GATO MIA");
+  }
+  
+  @override
+  void tomarBanho(){
+    print("GATO TOMA BANHO SE LAMBENDO");
+  }
+  @override
+    void fazerXixi(){
+    print("GATO FAZ XIXI NA CAIXA DE AREIA");
+    }
+}
+  
+class Cachorro extends Pet{
+  
+Cachorro(){
+    nome = "Bud";
+    idade = 5;
+    raca = "Husky";
+  }
+  
+  void latir(){
+    print("CACHORRO LATE");
+  }
+  @override
+    void tomarBanho(){
+    print("CACHORRO TOMA BANHO NA BANHEIRA");
+    }
+  @override
+    void fazerXixi(){
+    print("CACHORRO FAZ XIXI NO POSTE");
+    }
+}
+
+void main() {
+ Cachorro cachorro = Cachorro();
+  print(cachorro.nome);
+  print(cachorro.idade);
+  print(cachorro.raca);
+  cachorro.latir();
+  cachorro.comer();
+  cachorro.tomarBanho();
+  cachorro.fazerXixi();
+  
+  print("\n");
+  
+  Gato gato = Gato();
+  print(gato.nome);
+  print(gato.idade);
+  print(gato.raca);
+  gato.mia();
+  gato.comer();
+  gato.tomarBanho();
+  gato.fazerXixi();
+  print ("Tem brinquedos: " + gato.temBrinquedos.toString());
+   print("\n");
+  
+  Coelho coelho = Coelho();
+  print(coelho.nome);
+  print(coelho.idade);
+  print(coelho.raca);
+  coelho.pular();
+  coelho.comer();
+  coelho.tomarBanho();
+  coelho.fazerXixi();
+   print("\n");
+}
