@@ -1,0 +1,89 @@
+// Importando o Material Design
+import 'package:flutter/material.dart'; // Método para executar o aplicativo
+
+void main() {
+  runApp(MyApp());
+} // Classe que cria o App
+
+class MyApp extends StatelessWidget {
+  Widget _buildCard() {
+    return SizedBox(
+      height: 150,
+      child: Card(
+        child: Column(
+          children: [
+            ListTile(
+              title: Text(
+                '9999 Super Street',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+              subtitle: Text('Name City, EST 99999'),
+              leading: Icon(
+                Icons.restaurant_menu,
+                color: Colors.blue[500],
+              ),
+            ),
+            Divider(color: Colors.red),
+            ListTile(
+              title: Text('+55 (99) 99555-1212',
+                  style: TextStyle(fontWeight: FontWeight.w500)),
+              leading: Icon(
+                Icons.contact_phone,
+                color: Colors.blue[500],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  } // Primeiro método a ser executado
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Column(
+        children: <Widget>[
+          _buildCard(),
+          _buildCard(),
+          _buildCard(),
+          _buildCard(),
+        ],
+      ),
+    );
+    return MaterialApp(
+      home: Card(
+        child: ListTile(
+          title: Text(
+            '9999 Super Street',
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 22,
+              color: Colors.green,
+            ),
+          ),
+          subtitle: Text('Name City, EST 99999'),
+          leading: Icon(
+            Icons.restaurant_menu,
+            color: Colors.blue[500],
+          ),
+        ),
+      ),
+    );
+    return MaterialApp(
+      home: Card(
+        color: Colors.orange,
+        child: Text(
+          "Hello, Fiap Flutter",
+          textAlign: TextAlign.start,
+          style: TextStyle(
+            fontSize: 40,
+            color: Colors.red,
+          ),
+        ),
+      ),
+    ); // Criando o Widget do Material App e um Texto Olá
+    return MaterialApp(
+      home: Text("Hello, Fiap Flutter 2"),
+    );
+  }
+}
